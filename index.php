@@ -23,7 +23,7 @@ $url="http://api.aladhan.com/timingsByCity?city=$city&country=" . $query['countr
 $data= file_get_contents($url);
 $obj = json_decode($data);
 foreach ($obj->data->timings as $key => $value) {
-  echo "\n$key  $value\n";
+  echo PHP_EOL . "$key $value ";
 }
-
+echo PHP_EOL;
 ?>
